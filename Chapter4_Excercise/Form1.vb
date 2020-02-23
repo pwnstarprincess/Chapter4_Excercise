@@ -47,7 +47,7 @@ Public Class Form1
 
     End Sub
 
-    Private Function InputValidator() As Boolean
+    Private Function InputValid() As Boolean
         ''Check if input is numeric.  Display error message if it is not
         If (IsNumeric(monthsTextBox.Text) And IsNumeric(principalTextBox.Text) And IsNumeric(interestRateTextBox.Text)) Then
             Return True
@@ -73,7 +73,7 @@ Public Class Form1
 
     Private Sub AnalyzeButton_Click(sender As Object, e As EventArgs) Handles analyzeButton.Click
         ''If Input is valid
-        If InputValidator() Then
+        If InputValid() Then
             ''Show Monthly Payment and total Interest paid
             ShowResults(CalcMonthlyPayment(GetPrincipal(), GetInterest(), GetMonths()), CalcTotalInterest(GetPrincipal(), GetInterest(), GetMonths()))
 
