@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.loanTextBox = New System.Windows.Forms.TextBox()
+        Me.principalTextBox = New System.Windows.Forms.TextBox()
         Me.interestRateTextBox = New System.Windows.Forms.TextBox()
         Me.monthsTextBox = New System.Windows.Forms.TextBox()
         Me.monthlyPaymentTextBox = New System.Windows.Forms.TextBox()
@@ -36,12 +36,12 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'loanTextBox
+        'principalTextBox
         '
-        Me.loanTextBox.Location = New System.Drawing.Point(250, 52)
-        Me.loanTextBox.Name = "loanTextBox"
-        Me.loanTextBox.Size = New System.Drawing.Size(130, 26)
-        Me.loanTextBox.TabIndex = 0
+        Me.principalTextBox.Location = New System.Drawing.Point(250, 52)
+        Me.principalTextBox.Name = "principalTextBox"
+        Me.principalTextBox.Size = New System.Drawing.Size(130, 26)
+        Me.principalTextBox.TabIndex = 0
         '
         'interestRateTextBox
         '
@@ -152,7 +152,7 @@ Partial Class Form1
         Me.Controls.Add(Me.monthlyPaymentTextBox)
         Me.Controls.Add(Me.monthsTextBox)
         Me.Controls.Add(Me.interestRateTextBox)
-        Me.Controls.Add(Me.loanTextBox)
+        Me.Controls.Add(Me.principalTextBox)
         Me.Name = "Form1"
         Me.Text = "Car Loan"
         Me.ResumeLayout(False)
@@ -160,7 +160,7 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents loanTextBox As TextBox
+    Friend WithEvents principalTextBox As TextBox
     Friend WithEvents interestRateTextBox As TextBox
     Friend WithEvents monthsTextBox As TextBox
     Friend WithEvents monthlyPaymentTextBox As TextBox
