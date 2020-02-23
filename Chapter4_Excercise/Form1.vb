@@ -10,7 +10,7 @@
         months = Convert.ToDouble(monthsTextBox)
 
         ''Calculate monthly payment and total interest
-        monthlyPayment = (loanPrincipal * interest) / (1 - (1 + interest) ^ months)
+        monthlyPayment = (principal * interest) / (1 - (1 + interest) ^ months)
         totalInterest = months * monthlyPayment - principal
 
         ''Convert monthly payment and total interest to string and format
