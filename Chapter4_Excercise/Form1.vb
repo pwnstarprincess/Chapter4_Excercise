@@ -19,27 +19,27 @@ Public Class Form1
     End Function
 
     ''Function to get Prinicpal as Double
-    Private Function getPrincipal() As Double
+    Private Function GetPrincipal() As Double
 
         Return Convert.ToDouble(principalTextBox.Text)
 
     End Function
 
     ''Function to get interest as Double
-    Private Function getInterest() As Double
+    Private Function GetInterest() As Double
 
         Return Convert.ToDouble(interestRateTextBox.Text) / 100
 
     End Function
 
     ''Function to get months as Double
-    Private Function getMonths() As Double
+    Private Function GetMonths() As Double
 
         Return Convert.ToDouble(monthsTextBox.Text)
 
     End Function
 
-    Private Sub showResults(monthly As Double, interest As Double)
+    Private Sub ShowResults(monthly As Double, interest As Double)
 
 
         ''Output and format monthly payment and total interest to applicable textboxes
@@ -48,14 +48,14 @@ Public Class Form1
 
     End Sub
 
-    Private Sub analyzeButton_Click(sender As Object, e As EventArgs) Handles analyzeButton.Click
+    Private Sub AnalyzeButton_Click(sender As Object, e As EventArgs) Handles analyzeButton.Click
 
         ''Show Monthly Payment and total Interest paid
-        showResults(CalcMonthlyPayment(getPrincipal(), getInterest(), getMonths()), CalcTotalInterest(getPrincipal(), getInterest(), getMonths()))
+        ShowResults(CalcMonthlyPayment(GetPrincipal(), GetInterest(), GetMonths()), CalcTotalInterest(GetPrincipal(), GetInterest(), GetMonths()))
 
     End Sub
 
-    Private Sub principalTextBox_TextChanged(sender As Object, e As EventArgs) Handles principalTextBox.TextChanged
+    Private Sub PrincipalTextBox_TextChanged(sender As Object, e As EventArgs) Handles principalTextBox.TextChanged
         ''If the string is not empty then validate input with a try catch block
         If (Not String.IsNullOrEmpty(principalTextBox.Text)) Then
 
@@ -71,7 +71,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub interestRateTextBox_TextChanged(sender As Object, e As EventArgs) Handles interestRateTextBox.TextChanged
+    Private Sub InterestRateTextBox_TextChanged(sender As Object, e As EventArgs) Handles interestRateTextBox.TextChanged
         ''If the string is not empty then validate input with a try catch block
         If (Not String.IsNullOrEmpty(interestRateTextBox.Text)) Then
 
@@ -87,7 +87,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub monthsTextBox_TextChanged(sender As Object, e As EventArgs) Handles monthsTextBox.TextChanged
+    Private Sub MonthsTextBox_TextChanged(sender As Object, e As EventArgs) Handles monthsTextBox.TextChanged
         ''If the string is not empty then validate input with a try catch block
         If (Not String.IsNullOrEmpty(monthsTextBox.Text)) Then
 
