@@ -27,7 +27,7 @@ Partial Class Form1
         Me.monthsTextBox = New System.Windows.Forms.TextBox()
         Me.monthlyPaymentTextBox = New System.Windows.Forms.TextBox()
         Me.totalInterestTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.analyzeButton = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -73,14 +73,14 @@ Partial Class Form1
         Me.totalInterestTextBox.Size = New System.Drawing.Size(130, 26)
         Me.totalInterestTextBox.TabIndex = 5
         '
-        'Button1
+        'analyzeButton
         '
-        Me.Button1.Location = New System.Drawing.Point(54, 208)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(326, 53)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Analyze"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.analyzeButton.Location = New System.Drawing.Point(54, 208)
+        Me.analyzeButton.Name = "analyzeButton"
+        Me.analyzeButton.Size = New System.Drawing.Size(326, 53)
+        Me.analyzeButton.TabIndex = 3
+        Me.analyzeButton.Text = "Analyze"
+        Me.analyzeButton.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -147,7 +147,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.analyzeButton)
         Me.Controls.Add(Me.totalInterestTextBox)
         Me.Controls.Add(Me.monthlyPaymentTextBox)
         Me.Controls.Add(Me.monthsTextBox)
@@ -165,7 +165,7 @@ Partial Class Form1
     Friend WithEvents monthsTextBox As TextBox
     Friend WithEvents monthlyPaymentTextBox As TextBox
     Friend WithEvents totalInterestTextBox As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents analyzeButton As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
