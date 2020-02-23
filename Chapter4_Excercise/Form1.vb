@@ -2,12 +2,13 @@
     Private Sub analyzeButton_Click(sender As Object, e As EventArgs) Handles analyzeButton.Click
 
         Dim loanAmmount, interestRate, durationMonths As String
-        Dim loan, interest, months As Double
+        Dim loan, interest, months, monthlyPayment, totalInterest As Double
 
         ''Convert from string to double
         loan = Convert.ToDouble(loanTextBox)
         interest = Convert.ToDouble(interestRateTextBox)
         months = Convert.ToDouble(monthsTextBox)
+
 
 
 
