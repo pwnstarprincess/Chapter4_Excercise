@@ -41,7 +41,6 @@ Public Class Form1
 
     Private Sub ShowResults(monthly As Double, interest As Double)
 
-
         ''Output and format monthly payment and total interest to applicable textboxes
         monthlyPaymentTextBox.Text = (monthly.ToString("$0,00.00"))
         totalInterestTextBox.Text = (interest.ToString("$0,00.00"))
