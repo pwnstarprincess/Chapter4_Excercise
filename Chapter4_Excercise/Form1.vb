@@ -43,8 +43,8 @@ Public Class Form1
 
 
         ''Output and format monthly payment and total interest to applicable textboxes
-        monthlyPaymentTextBox.AppendText(monthly.ToString("$0,00.00"))
-        totalInterestTextBox.AppendText(interest.ToString("$0,00.00"))
+        monthlyPaymentTextBox.Text = (monthly.ToString("$0,00.00"))
+        totalInterestTextBox.Text = (interest.ToString("$0,00.00"))
 
     End Sub
 
@@ -52,7 +52,7 @@ Public Class Form1
         ''Check if input is numeric.  Display error message if it is not
         If (IsNumeric(monthsTextBox.Text) And IsNumeric(principalTextBox.Text) And IsNumeric(interestRateTextBox.Text)) Then
             Return True
-
+            ''Show error message and clear text in field containing incorrect data
         Else
             MessageBox.Show("The ammount of loan, interest rate, and duration in months must be a number",
             "Input Validation Failed",
@@ -73,7 +73,7 @@ Public Class Form1
     End Function
 
     Private Sub AnalyzeButton_Click(sender As Object, e As EventArgs) Handles analyzeButton.Click
-
+        ''If Input is valid
         If InputValidator() Then
             ''Show Monthly Payment and total Interest paid
             ShowResults(CalcMonthlyPayment(GetPrincipal(), GetInterest(), GetMonths()), CalcTotalInterest(GetPrincipal(), GetInterest(), GetMonths()))
