@@ -63,6 +63,7 @@ Partial Class Form1
         Me.monthlyPaymentTextBox.Name = "monthlyPaymentTextBox"
         Me.monthlyPaymentTextBox.ReadOnly = True
         Me.monthlyPaymentTextBox.Size = New System.Drawing.Size(130, 26)
+        Me.monthlyPaymentTextBox.TabIndex = 7
         Me.monthlyPaymentTextBox.TabStop = False
         '
         'totalInterestTextBox
@@ -71,6 +72,7 @@ Partial Class Form1
         Me.totalInterestTextBox.Name = "totalInterestTextBox"
         Me.totalInterestTextBox.ReadOnly = True
         Me.totalInterestTextBox.Size = New System.Drawing.Size(130, 26)
+        Me.totalInterestTextBox.TabIndex = 6
         Me.totalInterestTextBox.TabStop = False
         '
         'analyzeButton
@@ -88,7 +90,7 @@ Partial Class Form1
         Me.Label1.Location = New System.Drawing.Point(50, 52)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(148, 20)
-        Me.Label1.TabStop = False
+        Me.Label1.TabIndex = 5
         Me.Label1.Text = "Ammount of Loan:  "
         '
         'Label2
@@ -97,7 +99,7 @@ Partial Class Form1
         Me.Label2.Location = New System.Drawing.Point(50, 106)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(121, 20)
-        Me.Label2.TabStop = False
+        Me.Label2.TabIndex = 4
         Me.Label2.Text = "Intereset rate:   "
         '
         'Label3
@@ -106,7 +108,7 @@ Partial Class Form1
         Me.Label3.Location = New System.Drawing.Point(50, 126)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(109, 20)
-        Me.Label3.TabStop = False
+        Me.Label3.TabIndex = 3
         Me.Label3.Text = "(such as 5.25)"
         '
         'Label4
@@ -115,7 +117,7 @@ Partial Class Form1
         Me.Label4.Location = New System.Drawing.Point(50, 166)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(155, 20)
-        Me.Label4.TabStop = False
+        Me.Label4.TabIndex = 2
         Me.Label4.Text = "Duration in months:  "
         '
         'Label5
@@ -124,7 +126,7 @@ Partial Class Form1
         Me.Label5.Location = New System.Drawing.Point(57, 286)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(141, 20)
-        Me.Label5.TabStop = False
+        Me.Label5.TabIndex = 1
         Me.Label5.Text = "Monthly payment:  "
         '
         'Label6
@@ -133,7 +135,7 @@ Partial Class Form1
         Me.Label6.Location = New System.Drawing.Point(57, 339)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(147, 20)
-        Me.Label6.TabStop = False
+        Me.Label6.TabIndex = 0
         Me.Label6.Text = "Total interest paid:  "
         '
         'Form1
