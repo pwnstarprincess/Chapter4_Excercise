@@ -1,7 +1,7 @@
 ﻿''Jennifer Pezzulo
 ''February 23, 2019
 ''Chapter 4 Excercise
-''Git locaiton:  https://github.com/pwnstarprincess/Chapter4_Excercise.git
+''Git location:  https://github.com/pwnstarprincess/Chapter4_Excercise.git
 
 Public Class Form1
 
@@ -39,7 +39,7 @@ Public Class Form1
         Return Convert.ToDouble(monthsTextBox.Text)
 
     End Function
-
+    ''Function to show the output results
     Private Sub ShowResults(monthly As Double, interest As Double)
 
         ''Output and format monthly payment and total interest to applicable textboxes
@@ -47,18 +47,18 @@ Public Class Form1
         totalInterestTextBox.Text = (interest.ToString("$0,00.00"))
 
     End Sub
-
+    ''function to validate input
     Private Function InputValid() As Boolean
-        ''Check if input is numeric.  Display error message if it is not
+        ''Check if input is numeric.  If it is, return true.
         If (IsNumeric(monthsTextBox.Text) And IsNumeric(principalTextBox.Text) And IsNumeric(interestRateTextBox.Text)) Then
             Return True
-            ''Show error message and clear text in field containing incorrect data
+            ''If input is invalid, Show error message 
         Else
             MessageBox.Show("The ammount of loan, interest rate, and duration in months must be a number",
             "Input Validation Failed",
             MessageBoxButtons.OK,
             MessageBoxIcon.Error)
-
+            ''clear text in field containing incorrect data
             Dim input As Control
             For Each input In Me.Controls
                 If TypeOf input Is TextBox And Not IsNumeric(input.Text) Then
@@ -71,7 +71,7 @@ Public Class Form1
         End If
 
     End Function
-
+    ''Subroutine for handling button click
     Private Sub AnalyzeButton_Click(sender As Object, e As EventArgs) Handles analyzeButton.Click
         ''If Input is valid
         If InputValid() Then
