@@ -22,11 +22,11 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.loanTextBox = New System.Windows.Forms.TextBox()
+        Me.interestRateTextBox = New System.Windows.Forms.TextBox()
+        Me.monthsTextBox = New System.Windows.Forms.TextBox()
+        Me.monthlyPaymentTextBox = New System.Windows.Forms.TextBox()
+        Me.totalInterestTextBox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -36,42 +36,42 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'loanTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(250, 52)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(130, 26)
-        Me.TextBox1.TabIndex = 0
+        Me.loanTextBox.Location = New System.Drawing.Point(250, 52)
+        Me.loanTextBox.Name = "loanTextBox"
+        Me.loanTextBox.Size = New System.Drawing.Size(130, 26)
+        Me.loanTextBox.TabIndex = 0
         '
-        'TextBox2
+        'interestRateTextBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(250, 106)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(130, 26)
-        Me.TextBox2.TabIndex = 1
+        Me.interestRateTextBox.Location = New System.Drawing.Point(250, 106)
+        Me.interestRateTextBox.Name = "interestRateTextBox"
+        Me.interestRateTextBox.Size = New System.Drawing.Size(130, 26)
+        Me.interestRateTextBox.TabIndex = 1
         '
-        'TextBox3
+        'monthsTextBox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(250, 160)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(130, 26)
-        Me.TextBox3.TabIndex = 2
+        Me.monthsTextBox.Location = New System.Drawing.Point(250, 160)
+        Me.monthsTextBox.Name = "monthsTextBox"
+        Me.monthsTextBox.Size = New System.Drawing.Size(130, 26)
+        Me.monthsTextBox.TabIndex = 2
         '
-        'TextBox4
+        'monthlyPaymentTextBox
         '
-        Me.TextBox4.Location = New System.Drawing.Point(250, 280)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(130, 26)
-        Me.TextBox4.TabIndex = 4
+        Me.monthlyPaymentTextBox.Location = New System.Drawing.Point(250, 280)
+        Me.monthlyPaymentTextBox.Name = "monthlyPaymentTextBox"
+        Me.monthlyPaymentTextBox.ReadOnly = True
+        Me.monthlyPaymentTextBox.Size = New System.Drawing.Size(130, 26)
+        Me.monthlyPaymentTextBox.TabIndex = 4
         '
-        'TextBox5
+        'totalInterestTextBox
         '
-        Me.TextBox5.Location = New System.Drawing.Point(250, 333)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(130, 26)
-        Me.TextBox5.TabIndex = 5
+        Me.totalInterestTextBox.Location = New System.Drawing.Point(250, 333)
+        Me.totalInterestTextBox.Name = "totalInterestTextBox"
+        Me.totalInterestTextBox.ReadOnly = True
+        Me.totalInterestTextBox.Size = New System.Drawing.Size(130, 26)
+        Me.totalInterestTextBox.TabIndex = 5
         '
         'Button1
         '
@@ -148,11 +148,11 @@ Partial Class Form1
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.totalInterestTextBox)
+        Me.Controls.Add(Me.monthlyPaymentTextBox)
+        Me.Controls.Add(Me.monthsTextBox)
+        Me.Controls.Add(Me.interestRateTextBox)
+        Me.Controls.Add(Me.loanTextBox)
         Me.Name = "Form1"
         Me.Text = "Car Loan"
         Me.ResumeLayout(False)
@@ -160,11 +160,11 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents loanTextBox As TextBox
+    Friend WithEvents interestRateTextBox As TextBox
+    Friend WithEvents monthsTextBox As TextBox
+    Friend WithEvents monthlyPaymentTextBox As TextBox
+    Friend WithEvents totalInterestTextBox As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
