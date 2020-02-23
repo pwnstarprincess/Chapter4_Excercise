@@ -23,4 +23,52 @@
 
 
     End Sub
+
+    Private Sub principalTextBox_TextChanged(sender As Object, e As EventArgs) Handles principalTextBox.TextChanged
+        ''If the string is not empty then validate input with a try catch block
+        If (Not String.IsNullOrEmpty(principalTextBox.Text)) Then
+
+            ''Parse textbox as double
+            Try
+                Double.Parse(principalTextBox.Text)
+            Catch ex As Exception
+                ''Throw alert and clear textbox if not double
+                MessageBox.Show("Please enter a number")
+                principalTextBox.Clear()
+            End Try
+
+        End If
+    End Sub
+
+    Private Sub interestRateTextBox_TextChanged(sender As Object, e As EventArgs) Handles interestRateTextBox.TextChanged
+        ''If the string is not empty then validate input with a try catch block
+        If (Not String.IsNullOrEmpty(interestRateTextBox.Text)) Then
+
+            ''Parse textbox as double
+            Try
+                Double.Parse(interestRateTextBox.Text)
+            Catch ex As Exception
+                ''Throw alert and clear textbox if not double
+                MessageBox.Show("Please enter a number")
+                interestRateTextBox.Clear()
+            End Try
+
+        End If
+    End Sub
+
+    Private Sub monthsTextBox_TextChanged(sender As Object, e As EventArgs) Handles monthsTextBox.TextChanged
+        ''If the string is not empty then validate input with a try catch block
+        If (Not String.IsNullOrEmpty(monthsTextBox.Text)) Then
+
+            ''Parse textbox as double
+            Try
+                Double.Parse(monthsTextBox.Text)
+            Catch ex As Exception
+                ''Throw alert and clear textbox if not double
+                MessageBox.Show("Please enter a number")
+                monthsTextBox.Clear()
+            End Try
+
+        End If
+    End Sub
 End Class
