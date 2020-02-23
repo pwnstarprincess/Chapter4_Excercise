@@ -35,23 +35,23 @@
 
     End Function
 
-    Private Sub analyzeButton_Click(sender As Object, e As EventArgs) Handles analyzeButton.Click
-
-        Dim paymentPerMonth, interestTotal As String
-        Dim monthlyPayment, totalInterest As Double
-
-        monthlyPayment = CalcMonthlyPayment(getPrincipal(), getInterest(), getMonths())
-        totalInterest = CalcTotalInterest(getPrincipal(), getInterest(), getMonths())
+    Private Sub showResults(monthly As Double, interest As Double)
 
 
         ''Convert monthly payment and total interest to string and format
-        paymentPerMonth = monthlyPayment.ToString("$0,00.00")
-        interestTotal = totalInterest.ToString("$0,00.00")
+        monthly = monthly.ToString("$0,00.00")
+        interest = interest.ToString("$0,00.00")
 
         ''Output and format monthly payment and total interest to applicable textboxes
-        monthlyPaymentTextBox.AppendText(paymentPerMonth)
-        totalInterestTextBox.AppendText(interestTotal)
+        monthlyPaymentTextBox.AppendText(monthly)
+        totalInterestTextBox.AppendText(interest)
 
+    End Sub
+
+    Private Sub analyzeButton_Click(sender As Object, e As EventArgs) Handles analyzeButton.Click
+
+        ''Show Monthly Payment and total Interest paid
+        showResults(CalcMonthlyPayment(getPrincipal(), getInterest(), getMonths()), CalcTotalInterest(getPrincipal(), getInterest(), getMonths()))
 
     End Sub
 
