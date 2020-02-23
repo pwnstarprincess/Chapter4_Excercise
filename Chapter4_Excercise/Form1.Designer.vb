@@ -63,7 +63,7 @@ Partial Class Form1
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(130, 26)
-        Me.TextBox4.TabIndex = 3
+        Me.TextBox4.TabIndex = 4
         '
         'TextBox5
         '
@@ -71,14 +71,14 @@ Partial Class Form1
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(130, 26)
-        Me.TextBox5.TabIndex = 4
+        Me.TextBox5.TabIndex = 5
         '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(54, 208)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(326, 53)
-        Me.Button1.TabIndex = 5
+        Me.Button1.TabIndex = 3
         Me.Button1.Text = "Analyze"
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -88,7 +88,7 @@ Partial Class Form1
         Me.Label1.Location = New System.Drawing.Point(50, 52)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(148, 20)
-        Me.Label1.TabIndex = 6
+        Me.Label1.TabIndex = 4
         Me.Label1.Text = "Ammount of Loan:  "
         '
         'Label2
