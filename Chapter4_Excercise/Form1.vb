@@ -1,4 +1,8 @@
-﻿Public Class Form1
+﻿''Jennifer Pezzulo
+''February 23, 2019
+''Chapter 4 Excercise
+
+Public Class Form1
 
     ''Function to Calculate Monthly Payment
     Private Function CalcMonthlyPayment(principal As Double, interest As Double, months As Double) As Double
@@ -38,13 +42,9 @@
     Private Sub showResults(monthly As Double, interest As Double)
 
 
-        ''Convert monthly payment and total interest to string and format
-        monthly = monthly.ToString("$0,00.00")
-        interest = interest.ToString("$0,00.00")
-
         ''Output and format monthly payment and total interest to applicable textboxes
-        monthlyPaymentTextBox.AppendText(monthly)
-        totalInterestTextBox.AppendText(interest)
+        monthlyPaymentTextBox.AppendText(monthly.ToString("$0,00.00"))
+        totalInterestTextBox.AppendText(interest.ToString("$0,00.00"))
 
     End Sub
 
