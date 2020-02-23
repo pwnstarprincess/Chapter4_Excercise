@@ -48,58 +48,38 @@ Public Class Form1
 
     End Sub
 
+    Private Function InputValidator() As Boolean
+        ''Check if input is numeric.  Display error message if it is not
+        If (IsNumeric(monthsTextBox.Text) And IsNumeric(principalTextBox.Text) And IsNumeric(interestRateTextBox.Text)) Then
+            Return True
+
+        Else
+            MessageBox.Show("The ammount of loan, interest rate, and duration in months must be a number",
+            "Input Validation Failed",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Error)
+
+            Dim input As Control
+            For Each input In Me.Controls
+                If TypeOf input Is TextBox And Not IsNumeric(input.Text) Then
+                    input.Text = ""
+                End If
+            Next
+
+            Return False
+
+        End If
+
+    End Function
+
     Private Sub AnalyzeButton_Click(sender As Object, e As EventArgs) Handles analyzeButton.Click
 
-        ''Show Monthly Payment and total Interest paid
-        ShowResults(CalcMonthlyPayment(GetPrincipal(), GetInterest(), GetMonths()), CalcTotalInterest(GetPrincipal(), GetInterest(), GetMonths()))
-
-    End Sub
-
-    Private Sub PrincipalTextBox_TextChanged(sender As Object, e As EventArgs) Handles principalTextBox.TextChanged
-        ''If the string is not empty then validate input with a try catch block
-        If (Not String.IsNullOrEmpty(principalTextBox.Text)) Then
-
-            ''Parse textbox as double
-            Try
-                Double.Parse(principalTextBox.Text)
-            Catch ex As Exception
-                ''Throw alert and clear textbox if not double
-                MessageBox.Show("Please enter a number")
-                principalTextBox.Clear()
-            End Try
+        If InputValidator() Then
+            ''Show Monthly Payment and total Interest paid
+            ShowResults(CalcMonthlyPayment(GetPrincipal(), GetInterest(), GetMonths()), CalcTotalInterest(GetPrincipal(), GetInterest(), GetMonths()))
 
         End If
+
     End Sub
 
-    Private Sub InterestRateTextBox_TextChanged(sender As Object, e As EventArgs) Handles interestRateTextBox.TextChanged
-        ''If the string is not empty then validate input with a try catch block
-        If (Not String.IsNullOrEmpty(interestRateTextBox.Text)) Then
-
-            ''Parse textbox as double
-            Try
-                Double.Parse(interestRateTextBox.Text)
-            Catch ex As Exception
-                ''Throw alert and clear textbox if not double
-                MessageBox.Show("Please enter a number")
-                interestRateTextBox.Clear()
-            End Try
-
-        End If
-    End Sub
-
-    Private Sub MonthsTextBox_TextChanged(sender As Object, e As EventArgs) Handles monthsTextBox.TextChanged
-        ''If the string is not empty then validate input with a try catch block
-        If (Not String.IsNullOrEmpty(monthsTextBox.Text)) Then
-
-            ''Parse textbox as double
-            Try
-                Double.Parse(monthsTextBox.Text)
-            Catch ex As Exception
-                ''Throw alert and clear textbox if not double
-                MessageBox.Show("Please enter a number")
-                monthsTextBox.Clear()
-            End Try
-
-        End If
-    End Sub
 End Class
