@@ -5,9 +5,9 @@
         Dim principal, interest, months, monthlyPayment, totalInterest As Double
 
         ''Convert from string to double
-        principal = Convert.ToDouble(principalTextBox)
-        interest = Convert.ToDouble(interestRateTextBox)
-        months = Convert.ToDouble(monthsTextBox)
+        principal = Convert.ToDouble(principalTextBox.Text)
+        interest = Convert.ToDouble(interestRateTextBox.Text)
+        months = Convert.ToDouble(monthsTextBox.Text)
 
         ''Calculate monthly payment and total interest
         monthlyPayment = (principal * interest) / (1 - (1 + interest) ^ months)
