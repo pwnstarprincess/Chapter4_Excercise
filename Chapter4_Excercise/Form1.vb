@@ -1,7 +1,7 @@
 ﻿Public Class Form1
     Private Sub analyzeButton_Click(sender As Object, e As EventArgs) Handles analyzeButton.Click
 
-        Dim loanPrincipal, interestRate, durationMonths, paymentPerMonth, interestTotal As String
+        Dim paymentPerMonth, interestTotal As String
         Dim principal, interest, months, monthlyPayment, totalInterest As Double
 
         ''Convert from string to double
